@@ -28,7 +28,6 @@ async def runcmd(cmd: str) -> tuple[str, str, int, int]:
         process.pid,
     )
 
-
 async def update_requirements(deploy: str, plugins: str) -> None:
     modules = compare_requirements(deploy, plugins)
     try:
