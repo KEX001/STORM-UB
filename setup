@@ -5,7 +5,7 @@ _stormbot_zip () {
     then
         echo "https://github.com/${PLUGINS_REPO}/archive/master.zip"
     else
-        echo "https://github.com/kxunal/SPlugins/archive/master.zip"
+        echo "https://github.com/ERA990/SPlugins/archive/master.zip"
     fi
 }
 
