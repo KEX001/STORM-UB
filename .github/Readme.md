@@ -92,6 +92,8 @@
 
 ## ᴄʀᴇᴅɪᴛs
 
-
+<a href="https://github.com/KEX001/STORM-UB/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=KEX001/STORM-UB" />
+</a
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
