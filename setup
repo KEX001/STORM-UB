@@ -1,0 +1,28 @@
+#! /bin/bash
+
+_stormbot_zip () {
+    if [[ $PLUGINS_REPO ]]
+    then
+        echo "https://github.com/${PLUGINS_REPO}/archive/master.zip"
+    else
+        echo "https://github.com/kxunal/SPlugins/archive/master.zip"
+    fi
+}
+
+_starter () {
+    echo "ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ꜱᴛᴏʀᴍ ᴜꜱᴇʀʙᴏᴛ [ᴘʀɪᴍᴇ ᴠᴇʀꜱɪᴏɴ ᴠ2.1.1]"
+    stormpath="Plugins.zip"
+
+    wget -q $(_stormbot_zip) -O "$stormpath"
+    STORMPATH=$(zipinfo -1 "$stormpath" | grep -v "/.");
+    unzip -qq "$stormpath"
+    rm -rf "$stormpath"
+    cd $STORMPATH
+    python3 ../updater.py ../requirements.txt requirements.txt
+
+    echo "ꜱᴛᴀʀᴛɪɴɢ ꜱᴛᴏʀᴍ ᴜꜱᴇʀʙᴏᴛ [ᴘʀɪᴍᴇ ᴠᴇʀꜱɪᴏɴ ᴠ2.1.1]"
+    chmod 777 start.sh
+    ./start.sh
+}
+
+_starter
